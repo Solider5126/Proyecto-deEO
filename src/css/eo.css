@@ -1,0 +1,75 @@
+.left {
+  padding: 75px;
+}
+.left h3 {
+  font-size: 2.5rem;
+}
+.left p {
+  color: gray;
+  padding-top: 25px;
+}
+.left h1{
+  color: gray;
+}
+button {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #03045e;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+}
+
+button::before,
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+}
+
+button::before {
+  left: -10px;
+  background: #240046;
+}
+
+button::after {
+  right: -10px;
+  background: #5a189a;
+}
+
+button:hover::before,
+button:hover::after {
+  width: 58%;
+}
+
+button:hover span {
+  color: #e0aaff;
+  transition: 0.3s;
+}
+
+button span {
+  color: #03045e;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin: auto;
+  padding-top: 50px;
+}
+.nsmile img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
